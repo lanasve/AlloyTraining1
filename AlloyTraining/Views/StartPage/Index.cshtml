@@ -1,0 +1,11 @@
+﻿@using EPiServer.Core
+@using EPiServer.Web.Mvc.Html
+
+@model AlloyTraining.Models.Pages.StartPage
+
+<div>
+    <h1  @Html.EditAttributes(x=>x.Heading) >
+        @(Model.Heading ?? Model.PageName)
+    </h1>
+  @Html.PropertyFor(m => m.MainBody)
+</div>
